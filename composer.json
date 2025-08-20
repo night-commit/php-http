@@ -1,0 +1,15 @@
+{
+    "name": "abdelrhman-saeed/php-http",
+    "autoload": {
+        "psr-4": {
+            "AbdelrhmanSaeed\\PHPHttp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "abdelrhman-saeed",
+            "email": "abdelrhmansaeed001@gmail.com"
+        }
+    ],
+    "require": {}
+}
