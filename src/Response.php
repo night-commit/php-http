@@ -6,12 +6,12 @@ namespace AbdelrhmanSaeed\PHP\Http;
 class Response
 {
 
-  public const int OK       = 200;
-  public const int CREATED  = 201;
-  public const int ACCEPTED = 202;
+  public const int OK                   = 200;
+  public const int CREATED              = 201;
+  public const int ACCEPTED             = 202;
 
-  public const int MOVED = 301;
-  public const int FOUND = 302;
+  public const int MOVED                = 301;
+  public const int FOUND                = 302;
 
   public const int BAD_REQUEST          = 400;
   public const int UNAUTHORIZED         = 401;
@@ -23,7 +23,7 @@ class Response
   public const int REQUEST_TIMEOUT      = 408;
   public const int CONFLICT             = 409;
   public const int GONE                 = 410;
-  public const int MANY_REQUESTES       = 429;
+  public const int MANY_REQUESTS        = 429;
 
   public const int SERVER_ERROR         = 500;
   public const int NOT_IMPLEMENTED      = 501;

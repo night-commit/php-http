@@ -77,7 +77,7 @@ use AbdelrhmanSaeed\PHP\Http\Response;
  * Response::REQUEST_TIMEOUT      = 408;
  * Response::CONFLICT             = 409;
  * Response::GONE                 = 410;
- * Response::MANY_REQUESTES       = 429;
+ * Response::MANY_REQUESTS        = 429;
  * 
  * Response::SERVER_ERROR         = 500;
  * Response::NOT_IMPLEMENTED      = 501;
@@ -92,3 +92,9 @@ Response::send($data = "", $status, $headers);
 // Sends a response with an array as JSON and sets Content-Type: application/json
 Response::json($data = [], $status, $headers);
 ```
+
+---
+
+## License
+
+This package is licensed under the MIT License.
