@@ -51,8 +51,6 @@ $request->uri();         // Request URI
 $request->query();       // Query string
 
 ```
-## Usage Example
-
 **working with Responses:**
 ```php
 <?php
