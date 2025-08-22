@@ -2,7 +2,7 @@
     "name": "abdelrhman-saeed/php-http",
     "autoload": {
         "psr-4": {
-            "AbdelrhmanSaeed\\PHP/Http\\": "src/"
+            "AbdelrhmanSaeed\\PHP\\Http\\": "src/"
         }
     },
     "authors": [
