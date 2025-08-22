@@ -7,7 +7,7 @@
 ## Installation
 
 ```bash
-composer require abdelrhman-saeed/PHPHttp
+composer require abdelrhman-saeed/php-http
 ```
 
 ---
@@ -19,7 +19,7 @@ composer require abdelrhman-saeed/PHPHttp
 ```php
 <?php
 
-use AbdelrhmanSaeed\PHPHttp\Request;
+use AbdelrhmanSaeed\PHP\Http\Request;
 
 
 $request = new Request();
@@ -55,7 +55,7 @@ $request->query();       // Query string
 ```php
 <?php
 
-use AbdelrhmanSaeed\PHPHttp\Resopnse;
+use AbdelrhmanSaeed\PHP\Http\Response;
 
 /**
  * You can specify the status code directly or use predefined constants:

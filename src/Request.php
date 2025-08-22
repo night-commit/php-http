@@ -1,6 +1,6 @@
 <?php
 
-namespace AbdelrhmanSaeed\PHPHttp;
+namespace AbdelrhmanSaeed\PHP\Http;
 
 
 class Request
