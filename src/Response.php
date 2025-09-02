@@ -32,12 +32,12 @@ class Response
   public const int GATEWAy_TIMEOUT      = 504;
 
 
-  public static function send(string $data, int $status = 200, array $headers = []): void
+  public static function send(string $content, int $status = 200, array $headers = []): void
   {
     foreach ($headers as $header) header($header);
 
     http_response_code($status);
-    echo $data;
+    echo $content;
   }
 
   public static function json(array $data, int $status = 200, array $headers = []): void
