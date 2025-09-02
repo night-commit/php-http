@@ -58,8 +58,49 @@ $request->server_port(); // Server port (e.g., 8000)
 $request->host();        // Host (e.g., 127.0.0.1)
 $request->uri();         // Request URI
 $request->query();       // Query string
-
 ```
+
+**working with File Uploads:**
+```php
+<?php
+
+use AbdelrhmanSaeed\PHP\Http\Request;
+
+$request = new Request;
+
+/**
+ * return an array of the uploaded files data 
+ */
+$request->files();
+
+/**
+ * return the specified file
+ */
+$file = $request->file('picture-name');
+
+ // file name
+$file->name();
+
+ // file tmp name
+$file->tmp();
+
+ // file size in bytes
+$file->size();
+
+ // file extension
+$file->extension();
+
+/**
+ * check if file is uploaded or not
+ */
+$file->uploaded();
+
+/**
+ * stores the file in the specified path
+ */
+$file->strore('somewhere/in/the/system', 'optional-name');
+```
+
 **working with Responses:**
 ```php
 <?php
