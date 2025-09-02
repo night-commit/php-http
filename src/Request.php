@@ -5,21 +5,18 @@ namespace AbdelrhmanSaeed\PHP\Http;
 
 class Request
 {
-  private array $info;
+  private array   $info;
 
   /**
    * instantiating the Request class and caching server info
    */
-  public function __construct()
-  {
-    $this->info = $_SERVER;
-  }
+  public function __construct() { $this->info = $_SERVER; }
 
   /**
    * returns json data request
    * @return string
    */
-  public function getContent(): string
+  public function content(): string
   {
     return file_get_contents("php://input");
   }
@@ -30,7 +27,7 @@ class Request
    */
   public function data(): array
   {
-    return json_decode($this->getContent(), true);
+    return json_decode($this->content(), true);
   }
 
   /**
@@ -124,4 +121,30 @@ class Request
   {
     return $this->info['QUERY_STRING'];
   }
+
+  public function files(): array
+  {
+    return $_FILES;
+  }
+
+  public function file(string $name): ?File
+  {
+    return array_key_exists($name, $this->files())
+      ? new File($this->files()[$name])
+      : null;
+  }
+
+  public function headers(?string $name = null): null|string|array
+  {
+    return is_null($name) ? getallheaders() : getallheaders()[$name] ?? null;
+  }
+
+  public function bearer(): ?string
+  {
+    $token = $this->headers('Authorization');
+    $token = explode(' ', $token);
+
+    return $token[1] ?? null;
+  }
+
 }
