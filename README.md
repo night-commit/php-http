@@ -42,6 +42,15 @@ $request->exists("name", $data);
 // Check if a specific key exists and is not empty in GET or POST
 $request->filled("name", $data);
 
+// get request headers
+$request->headers();
+
+// get specific header and returns null if not found
+$request->headers('Authorization');
+
+// get bearer token
+$request->bearer();
+
 // Server-related helpers
 $request->root();        // Document root
 $request->server_name(); // Server name
@@ -91,6 +100,81 @@ Response::send($data = "", $status, $headers);
 
 // Sends a response with an array as JSON and sets Content-Type: application/json
 Response::json($data = [], $status, $headers);
+```
+
+**working with Cookies:**
+```php
+<?php
+
+use AbdelrhmanSaeed\PHP\Http\Cookie;
+
+// set a cookie
+Cookie::set('cookie-name', 'value', Cookie::minutes(10));
+
+// get a cookie
+Cookie::get('cookie-name');
+
+// delete a cookie
+Cookie::forget('cookie-name');
+
+// Cookie helper methods
+Cookie::seconds($count);
+Cookie::minutes($count);
+Cookie::hours($count);
+Cookie::days($count);
+Cookie::months($count);
+Cookie::year($count);
+```
+
+**working with Sessions:**
+
+```php
+<?php
+
+use AbdelrhmanSaeed\PHP\Http\Session;
+
+/**
+* you can instantiate the Session class
+* or use the session method in the Request class
+*/
+
+$session = new Seession;
+// or
+$request = new Request;
+$session = $request->sesssion(); 
+
+// start session if not already started
+$session->start();
+
+// destroy the session
+$session->destroy();
+
+// set session variable
+$session->set('name', 'john doe or what ever');
+
+// get session variable
+$session->get('name');
+
+// get all session variables
+$session->all();
+
+// session id
+$session->id();
+
+// regenerate session id
+$session->regenerate_id();
+
+// session name
+$session->name();
+
+// session status
+$session->status();
+
+// delete session variable
+$session->forget('name');
+
+// delete all session variables but not the session it self
+$session->flush();
 ```
 
 ---

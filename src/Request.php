@@ -5,12 +5,17 @@ namespace AbdelrhmanSaeed\PHP\Http;
 
 class Request
 {
-  private array   $info;
+  private array $info;
+  private Session $session;
 
   /**
    * instantiating the Request class and caching server info
    */
-  public function __construct() { $this->info = $_SERVER; }
+  public function __construct()
+  {
+    $this->info = $_SERVER;
+    $this->session = new Session;
+  }
 
   /**
    * returns json data request
@@ -145,6 +150,11 @@ class Request
     $token = explode(' ', $token);
 
     return $token[1] ?? null;
+  }
+
+  public function session(): Session
+  {
+    return $this->session;
   }
 
 }
