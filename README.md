@@ -25,7 +25,7 @@ use AbdelrhmanSaeed\PHP\Http\Request;
 $request = new Request();
 
 // Returns the raw request JSON post data
-$request->getContent();
+$request->content();
 
 // Returns the decoded request JSON data as an array
 $request->data();
@@ -69,7 +69,7 @@ use AbdelrhmanSaeed\PHP\Http\Request;
 $request = new Request;
 
 /**
- * return an array of the uploaded files data 
+ * return an array of the uploaded file data 
  */
 $request->files();
 
@@ -175,7 +175,7 @@ Cookie::year($count);
 use AbdelrhmanSaeed\PHP\Http\Session;
 
 /**
-* you can instantiate the Session class
+* You can instantiate the Session class
 * or use the session method in the Request class
 */
 
@@ -191,7 +191,7 @@ $session->start();
 $session->destroy();
 
 // set session variable
-$session->set('name', 'john doe or what ever');
+$session->set('name', 'john doe or whatever');
 
 // get session variable
 $session->get('name');
@@ -214,7 +214,7 @@ $session->status();
 // delete session variable
 $session->forget('name');
 
-// delete all session variables but not the session it self
+// delete all session variables but not the session itself
 $session->flush();
 ```
 
