@@ -32,7 +32,7 @@ class Request
    */
   public function data(): array
   {
-    return json_decode($this->content(), true);
+    return json_decode($this->content(), true) ?? [];
   }
 
   /**
