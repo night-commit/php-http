@@ -1,6 +1,6 @@
 # PHP-HTTP
 
-`PHP-HTTP` is a lightweight PHP package to simplify working with requests and responses
+`PHP-HTTP` is a lightweight PHP package to simplify working with requests, responses, cookies, sessions and file uploads
 
 ---
 
