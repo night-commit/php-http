@@ -7,7 +7,7 @@
 ## Installation
 
 ```bash
-composer require abdelrhman-saeed/php-http
+composer require night-commit/php-http
 ```
 
 ---
@@ -19,7 +19,7 @@ composer require abdelrhman-saeed/php-http
 ```php
 <?php
 
-use AbdelrhmanSaeed\PHP\Http\Request;
+use NightCommit\PHP\Http\Request;
 
 
 $request = new Request();
@@ -64,7 +64,7 @@ $request->query();       // Query string
 ```php
 <?php
 
-use AbdelrhmanSaeed\PHP\Http\Request;
+use NightCommit\PHP\Http\Request;
 
 $request = new Request;
 
@@ -105,7 +105,7 @@ $file->strore('somewhere/in/the/system', 'optional-name');
 ```php
 <?php
 
-use AbdelrhmanSaeed\PHP\Http\Response;
+use NightCommit\PHP\Http\Response;
 
 /**
  * You can specify the status code directly or use predefined constants:
@@ -147,7 +147,7 @@ Response::json($data = [], $status, $headers);
 ```php
 <?php
 
-use AbdelrhmanSaeed\PHP\Http\Cookie;
+use NightCommit\PHP\Http\Cookie;
 
 // set a cookie
 Cookie::set('cookie-name', 'value', Cookie::minutes(10));
@@ -172,7 +172,7 @@ Cookie::year($count);
 ```php
 <?php
 
-use AbdelrhmanSaeed\PHP\Http\Session;
+use NightCommit\PHP\Http\Session;
 
 /**
 * You can instantiate the Session class

@@ -1,6 +1,6 @@
 <?php
 
-namespace AbdelrhmanSaeed\PHP\Http;
+namespace NightCommit\PHP\Http;
 
 
 /**

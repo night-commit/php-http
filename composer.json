@@ -1,8 +1,10 @@
 {
-    "name": "abdelrhman-saeed/php-http",
+    "name": "night-commit/php-http",
+    "type": "library",
+    "description": "php library to handle http requests and responses",
     "autoload": {
         "psr-4": {
-            "AbdelrhmanSaeed\\PHP\\Http\\": "src/"
+            "NightCommit\\PHP\\Http\\": "src/"
         }
     },
     "authors": [
